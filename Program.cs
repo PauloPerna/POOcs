@@ -52,8 +52,6 @@ namespace ExercicioPOO{
                         decimal.TryParse(Console.ReadLine(), out valor);
                         if(testeCorrentistas[index].pagarConta(valor)){
                             Console.WriteLine("Conta paga!"); 
-                        }else{
-                            Console.WriteLine("Saldo insuficiente!");  
                         }
                         break;
                     case 4:
@@ -80,6 +78,10 @@ namespace ExercicioPOO{
                         Console.WriteLine($"Entre o índice do correntista 0/{testeCorrentistas.Count - 1}");
                         int.TryParse(Console.ReadLine(), out index);
                         Console.WriteLine($"A soma das despesas do correntista é {testeCorrentistas[index].somarDespesas().ToString("C")}");
+                        break;
+                    case 7:
+                        stop = true;
+                        Console.WriteLine("Até mais! :D");
                         break;
                     default:
                         Console.WriteLine("Não entendi... Poderia repetir?");
