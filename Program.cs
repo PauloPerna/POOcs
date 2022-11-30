@@ -7,10 +7,11 @@ namespace ExercicioPOO{
             bool stop = false;
             int cpf;
             while(!stop){
-                Console.WriteLine("Entre cpf correntista:");
+                Console.WriteLine("Antes de testarmos, vamos cadastrar todos os correntistas");
+                Console.WriteLine("Digite o CPF do novo correntista:");
                 int.TryParse(Console.ReadLine(), out cpf);
                 testeCorrentistas.Add(new Correntista(cpf));
-                Console.WriteLine("Stop? <1/0>");
+                Console.WriteLine("Seguir para os testes? <1/0>");
                 stop = Console.ReadLine() == "1";
             }
 
